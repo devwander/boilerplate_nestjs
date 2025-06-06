@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PostgresConfigService } from './config/typeorm';
 import { ProductsModule } from './products/products.module';
+import { CompaniesModule } from './companies/companies.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { ProductsModule } from './products/products.module';
       inject: [PostgresConfigService],
     }),
     ProductsModule,
+    CompaniesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
