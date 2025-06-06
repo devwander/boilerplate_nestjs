@@ -63,8 +63,6 @@ export class Products1749157906219 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    // A ordem de DROP é geralmente o inverso da criação
-    await queryRunner.dropIndex('products', 'IDX_products_name'); // Use o mesmo nome do índice criado
     await queryRunner.dropTable('products');
   }
 }
